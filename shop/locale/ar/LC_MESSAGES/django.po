@@ -1,0 +1,898 @@
+# Arabic translations for the Beni-Suef University student project.
+
+msgid ""
+msgstr "Project-Id-Version: BSU Learning Portal\nLanguage: ar\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+
+msgid "%(count)s students"
+msgstr "%(count)s طالب"
+
+msgid "%(days)s days"
+msgstr "%(days)s يوم"
+
+msgid "404 / Page not found"
+msgstr "404 / الصفحة غير موجودة"
+
+msgid "A beginner-friendly introduction to variables, conditions, loops, functions, and simple data structures, with short exercises throughout the week."
+msgstr "مقدمة مناسبة للمبتدئين في المتغيرات والشروط والحلقات والدوال وهياكل البيانات البسيطة، مع تدريبات قصيرة طوال الأسبوع."
+
+msgid "A complete profile keeps your learning plans organised."
+msgstr "اكتمال بياناتك يساعدك تنظّم رحلتك التعليمية."
+
+msgid "A place to learn. A skill to take forward."
+msgstr "مساحة للتعلّم ومهارات للمستقبل."
+
+msgid "A practical introduction to datasets, features, training, evaluation, and common machine learning workflows using small, interpretable examples."
+msgstr "مقدمة عملية في مجموعات البيانات والخصائص والتدريب والتقييم وخطوات عمل تعلّم الآلة، باستخدام أمثلة صغيرة وسهلة التفسير."
+
+msgid "A practical opportunity to learn, practise, and connect."
+msgstr "فرصة عملية للتعلّم والتطبيق وتبادل الخبرات."
+
+msgid "A practical university activity designed for curious students."
+msgstr "نشاط جامعي عملي للطلاب المهتمين بالتعلّم."
+
+msgid "About you"
+msgstr "معلوماتك"
+
+msgid "Academic year"
+msgstr "السنة الدراسية"
+
+msgid "Account details"
+msgstr "بيانات الحساب"
+
+msgid "Activities"
+msgstr "الكورسات"
+
+msgid "Activities found: %(count)s"
+msgstr "عدد الكورسات: %(count)s"
+
+msgid "Activity categories"
+msgstr "التخصصات"
+
+msgid "Activity closed"
+msgstr "التسجيل مغلق"
+
+msgid "Activity completed"
+msgstr "الكورس مكتمل"
+
+msgid "Activity details"
+msgstr "تفاصيل الكورس"
+
+msgid "Activity full"
+msgstr "اكتملت المقاعد"
+
+msgid "Activity pages"
+msgstr "صفحات الكورسات"
+
+msgid "Advanced"
+msgstr "متقدم"
+
+msgid "All categories"
+msgstr "كل التخصصات"
+
+msgid "All levels"
+msgstr "كل المستويات"
+
+msgid "All places in this activity have been taken."
+msgstr "تم حجز كل المقاعد المتاحة في الكورس."
+
+msgid "Already have an account?"
+msgstr "عندك حساب بالفعل؟"
+
+msgid "An accessible introduction to user research, information hierarchy, prototyping, and inclusive design decisions for digital products."
+msgstr "مقدمة مبسطة في أبحاث المستخدمين وترتيب المعلومات والنماذج الأولية وقرارات التصميم التي تراعي اختلاف احتياجات المستخدمين."
+
+msgid "Application security and digital safety"
+msgstr "أمن التطبيقات والسلامة الرقمية"
+
+msgid "Apply basic responsive layout and accessibility practices."
+msgstr "طبّق أساسيات التصميم المتجاوب وإمكانية الوصول."
+
+msgid "Apply basic secure development habits to a web feature."
+msgstr "طبّق ممارسات التطوير الآمن الأساسية على ميزة في موقع."
+
+msgid "Apply filters"
+msgstr "بحث"
+
+msgid "Artificial Intelligence"
+msgstr "الذكاء الاصطناعي"
+
+msgid "At a glance"
+msgstr "معلومات سريعة"
+
+msgid "Available"
+msgstr "متاح"
+
+msgid "Available activities"
+msgstr "الكورسات المتاحة"
+
+msgid "Back to home"
+msgstr "العودة للرئيسية"
+
+msgid "Basic Python and familiarity with descriptive statistics or spreadsheets."
+msgstr "معرفة أساسيات بايثون والإحصاء الوصفي أو جداول البيانات."
+
+msgid "Basic Python programming or equivalent experience working with spreadsheets."
+msgstr "معرفة أساسيات برمجة بايثون أو خبرة مكافئة في العمل بجداول البيانات."
+
+msgid "Basic Python syntax, functions, lists, and dictionaries."
+msgstr "معرفة أساسيات بايثون والدوال والقوائم والقواميس."
+
+msgid "Basic familiarity with websites or mobile applications."
+msgstr "معرفة أساسية باستخدام المواقع أو تطبيقات الهاتف."
+
+msgid "Basic web development knowledge is recommended. This is a defensive, educational workshop."
+msgstr "يُفضّل معرفة أساسيات تطوير الويب. هذه ورشة تعليمية تركز على الحماية."
+
+msgid "Before You Begin"
+msgstr "قبل ما تبدأ"
+
+msgid "Beginner"
+msgstr "مبتدئ"
+
+msgid "Beni-Suef University"
+msgstr "جامعة بني سويف"
+
+msgid "Break a problem into functions and test each part."
+msgstr "قسّم المشكلة إلى دوال واختبر كل جزء."
+
+msgid "Build a page that adapts to smaller screens."
+msgstr "ابنِ صفحة تتكيّف مع الشاشات الصغيرة."
+
+msgid "Build a solid foundation in semantic HTML and responsive CSS."
+msgstr "ابنِ أساسًا قويًا في HTML وتنسيق الصفحات المتجاوبة باستخدام CSS."
+
+msgid "Build confidence with Python through practical programming challenges."
+msgstr "طوّر مهاراتك في بايثون من خلال تحديات برمجية عملية."
+
+msgid "Build practical knowledge through guided exercises."
+msgstr "اكتسب خبرة عملية من خلال تدريبات بإشراف المدرب."
+
+msgid "Build reusable React components."
+msgstr "ابنِ مكوّنات React قابلة لإعادة الاستخدام."
+
+msgid "Build skills beyond the classroom."
+msgstr "ابنِ مهارات تتجاوز قاعة الدراسة."
+
+msgid "Building Modern User Interfaces"
+msgstr "بناء واجهات مستخدم حديثة"
+
+msgid "Cancel"
+msgstr "إلغاء"
+
+msgid "Capacity"
+msgstr "عدد المقاعد"
+
+msgid "Catalogue"
+msgstr "الكورسات"
+
+msgid "Category"
+msgstr "التخصص"
+
+msgid "Check back soon for new learning opportunities."
+msgstr "تابعنا قريبًا لاكتشاف فرص تعلّم جديدة."
+
+msgid "Choose suitable lists, dictionaries, or sets for simple tasks."
+msgstr "اختار القوائم أو القواميس أو المجموعات المناسبة للمهام البسيطة."
+
+msgid "Choose your activity"
+msgstr "اختار الكورس المناسب"
+
+msgid "Clean and inspect a small tabular dataset."
+msgstr "نظّف مجموعة بيانات جدولية صغيرة وافحصها."
+
+msgid "Clear filters"
+msgstr "إلغاء التصفية"
+
+msgid "Close details"
+msgstr "إغلاق التفاصيل"
+
+msgid "Closed"
+msgstr "مغلق"
+
+msgid "Comfort using a web browser and basic file management. No coding experience required."
+msgstr "معرفة أساسية باستخدام المتصفح وإدارة الملفات. لا تحتاج إلى خبرة برمجية."
+
+msgid "Compare"
+msgstr "قارن"
+
+msgid "Compare training and evaluation data."
+msgstr "قارن بين بيانات التدريب وبيانات التقييم."
+
+msgid "Completed"
+msgstr "مكتمل"
+
+msgid "Connect related tables with joins."
+msgstr "اربط الجداول المرتبطة باستخدام JOIN."
+
+msgid "Course Overview"
+msgstr "نظرة عامة"
+
+msgid "Course details are open"
+msgstr "تم فتح تفاصيل الكورس"
+
+msgid "Course level"
+msgstr "مستوى الكورس"
+
+msgid "Courses and activities"
+msgstr "الكورسات والأنشطة"
+
+msgid "Create a semantic multi-page website."
+msgstr "أنشئ موقعًا متعدد الصفحات باستخدام عناصر HTML المناسبة."
+
+msgid "Create a student account to explore activities and keep your university details organised."
+msgstr "أنشئ حسابًا طلابيًا لتصفّح الكورسات وتنظيم بياناتك الجامعية."
+
+msgid "Create account"
+msgstr "إنشاء حساب"
+
+msgid "Create an account"
+msgstr "أنشئ حسابًا"
+
+msgid "Create and review a simple accessible prototype."
+msgstr "أنشئ نموذجًا أوليًا بسيطًا وسهل الوصول وراجعه."
+
+msgid "Create low-fidelity wireframes."
+msgstr "أنشئ مخططات أولية قليلة التفاصيل."
+
+msgid "Create reusable functions with clear parameters."
+msgstr "أنشئ دوال قابلة لإعادة الاستخدام بمعاملات واضحة."
+
+msgid "Create your account"
+msgstr "أنشئ حسابك"
+
+msgid "Create your student account"
+msgstr "أنشئ حسابك الطلابي"
+
+msgid "Cybersecurity"
+msgstr "الأمن السيبراني"
+
+msgid "Data Analysis with Python"
+msgstr "تحليل البيانات ببايثون"
+
+msgid "Data Science"
+msgstr "علوم البيانات"
+
+msgid "Database"
+msgstr "قواعد البيانات"
+
+msgid "Describe how data supports an intelligent system."
+msgstr "اشرح دور البيانات في دعم الأنظمة الذكية."
+
+msgid "Design classes with meaningful attributes and methods."
+msgstr "صمّم فئات بخصائص ودوال ذات معنى."
+
+msgid "Discover courses and activities at Beni-Suef University."
+msgstr "اكتشف الكورسات والأنشطة في جامعة بني سويف."
+
+msgid "Discover. Practise. Move forward."
+msgstr "اكتشف. جرّب. وطوّر نفسك."
+
+msgid "Distinguish artificial intelligence, machine learning, and automation."
+msgstr "ميّز بين الذكاء الاصطناعي وتعلّم الآلة والأتمتة."
+
+msgid "Duration"
+msgstr "المدة"
+
+msgid "Edit Profile"
+msgstr "تعديل الحساب"
+
+msgid "Edit profile"
+msgstr "تعديل البيانات"
+
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+msgid "End date"
+msgstr "تاريخ النهاية"
+
+msgid "Enrolled on"
+msgstr "تاريخ التسجيل"
+
+msgid "Enrolled students"
+msgstr "الطلاب المسجّلون"
+
+msgid "Enrollment is available to student accounts."
+msgstr "التسجيل متاح لحسابات الطلاب."
+
+msgid "Explain how a sensor provides input to a robotic system."
+msgstr "اشرح كيف يزوّد الحساس نظام الروبوت بالبيانات."
+
+msgid "Explain how browsers request and display web pages."
+msgstr "اشرح كيف تطلب المتصفحات صفحات الويب وتعرضها."
+
+msgid "Explain how keys and relationships organise data."
+msgstr "اشرح كيف تنظّم المفاتيح والعلاقات البيانات."
+
+msgid "Explain why authentication and access control are different."
+msgstr "اشرح الفرق بين التحقق من الهوية والتحكم في الوصول."
+
+msgid "Explore"
+msgstr "استكشف"
+
+msgid "Explore Activities"
+msgstr "استكشف الكورسات"
+
+msgid "Explore activities"
+msgstr "استكشف الكورسات"
+
+msgid "Explore courses and activities that help you learn, practise, and grow."
+msgstr "استكشف كورسات وأنشطة تساعدك تتعلّم وتطبّق وتطوّر مهاراتك."
+
+msgid "Explore how sensors, code, and simple mechanisms work together in a guided lab."
+msgstr "اكتشف إزاي الحساسات والكود والآليات البسيطة بتشتغل مع بعض في معمل عملي."
+
+msgid "Explore practical courses and university activities. Find your interests, learn with experienced trainers, and turn curiosity into real skills."
+msgstr "اكتشف كورسات عملية وأنشطة جامعية تناسب اهتماماتك، واتعلّم مع مدربين أصحاب خبرة عشان تحوّل فضولك لمهارات حقيقية."
+
+msgid "Explore supervised learning concepts with approachable examples."
+msgstr "اكتشف مفاهيم التعلّم الخاضع للإشراف من خلال أمثلة بسيطة."
+
+msgid "Explore the catalogue"
+msgstr "تصفّح الكورسات"
+
+msgid "Faculty"
+msgstr "الكلية"
+
+msgid "Filter by category"
+msgstr "تصفية حسب التخصص"
+
+msgid "Find your interest"
+msgstr "اكتشف اهتمامك"
+
+msgid "Find your next activity."
+msgstr "اختار خطوتك الجاية."
+
+msgid "First name"
+msgstr "الاسم الأول"
+
+msgid "Footer navigation"
+msgstr "روابط الموقع"
+
+msgid "Get started"
+msgstr "ابدأ الآن"
+
+msgid "Good to see you"
+msgstr "سعداء برجوعك"
+
+msgid "Grow"
+msgstr "اتطوّر"
+
+msgid "HTML & CSS Fundamentals"
+msgstr "أساسيات HTML وCSS"
+
+msgid "HTML, CSS, and basic JavaScript familiarity."
+msgstr "معرفة HTML وCSS وأساسيات JavaScript."
+
+msgid "Hide"
+msgstr "إخفاء"
+
+msgid "Hide password"
+msgstr "إخفاء كلمة المرور"
+
+msgid "Home"
+msgstr "الرئيسية"
+
+msgid "Identify important fairness, privacy, and accountability questions."
+msgstr "تعرّف على أسئلة العدالة والخصوصية والمساءلة."
+
+msgid "Intermediate"
+msgstr "متوسط"
+
+msgid "Interpret basic model performance measures and limitations."
+msgstr "فسّر مقاييس أداء النماذج الأساسية وحدودها."
+
+msgid "Introduction to Artificial Intelligence"
+msgstr "مقدمة في الذكاء الاصطناعي"
+
+msgid "Introduction to Web Development"
+msgstr "مقدمة في تطوير الويب"
+
+msgid "Join Activity"
+msgstr "سجّل في الكورس"
+
+msgid "Join the community"
+msgstr "انضم لينا"
+
+msgid "Join the portal"
+msgstr "إنشاء حساب"
+
+msgid "Keep your details current."
+msgstr "خلّي بياناتك محدّثة."
+
+msgid "Keep your student details current so your profile is ready when you need it."
+msgstr "حدّث بياناتك الطلابية عشان يكون حسابك جاهز وقت ما تحتاجه."
+
+msgid "Last name"
+msgstr "اسم العائلة"
+
+msgid "Learn how to query and organise structured information with SQL."
+msgstr "اتعلّم تنظيم البيانات والاستعلام عنها باستخدام SQL."
+
+msgid "Learn something that stays with you."
+msgstr "اتعلّم مهارة تكمّل معاك."
+
+msgid "Learn the building blocks of websites through a guided practical project."
+msgstr "اتعلّم أساسيات بناء المواقع من خلال مشروع عملي بإشراف المدرب."
+
+msgid "Learn the component mindset behind modern interactive interfaces."
+msgstr "اتعلّم بناء الواجهات التفاعلية الحديثة باستخدام المكوّنات."
+
+msgid "Learn the principles of user-centred design through practical exercises."
+msgstr "اتعلّم مبادئ التصميم اللي بيبدأ من احتياجات المستخدم بتدريبات عملية."
+
+msgid "Learning Outcomes"
+msgstr "أهداف التعلّم"
+
+msgid "Learning happens together."
+msgstr "بنتعلّم أكتر مع بعض."
+
+msgid "Led by"
+msgstr "مع المدرب"
+
+msgid "Loading activities…"
+msgstr "جارٍ تحميل الكورسات…"
+
+msgid "Loading course details…"
+msgstr "جارٍ تحميل تفاصيل الكورس…"
+
+msgid "Log in"
+msgstr "تسجيل الدخول"
+
+msgid "Log in here"
+msgstr "سجّل دخولك"
+
+msgid "Log in to see full details"
+msgstr "سجّل دخولك لعرض التفاصيل كاملة"
+
+msgid "Log in to see more courses"
+msgstr "سجّل دخولك لعرض باقي الكورسات"
+
+msgid "Log in to your account"
+msgstr "سجّل دخولك"
+
+msgid "Log out"
+msgstr "تسجيل الخروج"
+
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+msgid "Machine Learning Fundamentals"
+msgstr "أساسيات تعلّم الآلة"
+
+msgid "Machine learning and responsible AI"
+msgstr "تعلّم الآلة والذكاء الاصطناعي المسؤول"
+
+msgid "Main navigation"
+msgstr "القائمة الرئيسية"
+
+msgid "Make room for something new"
+msgstr "ابدأ تجربة جديدة"
+
+msgid "Make your next move"
+msgstr "ابدأ خطوتك الجاية"
+
+msgid "Maximum students"
+msgstr "الحد الأقصى للطلاب"
+
+msgid "My Profile"
+msgstr "حسابي"
+
+msgid "My activities"
+msgstr "كورساتي"
+
+msgid "New to the portal?"
+msgstr "أول مرة تزورنا؟"
+
+msgid "Next"
+msgstr "التالي"
+
+msgid "Next page"
+msgstr "الصفحة التالية"
+
+msgid "No activities are available yet."
+msgstr "لا توجد كورسات متاحة حاليًا."
+
+msgid "No activities match your search."
+msgstr "لا توجد كورسات مطابقة لبحثك."
+
+msgid "No database experience required. Basic computer literacy is sufficient."
+msgstr "لا تحتاج إلى خبرة في قواعد البيانات. تكفي المعرفة الأساسية بالحاسوب."
+
+msgid "No description available."
+msgstr "لا يوجد وصف متاح."
+
+msgid "No design software experience required. Curiosity about how people use digital products is helpful."
+msgstr "لا تحتاج إلى خبرة ببرامج التصميم. الاهتمام بطريقة استخدام الناس للمنتجات الرقمية مفيد."
+
+msgid "No previous AI experience required. General computer literacy is helpful."
+msgstr "لا تحتاج إلى خبرة سابقة في الذكاء الاصطناعي. المعرفة العامة بالحاسوب مفيدة."
+
+msgid "No previous experience required."
+msgstr "لا تحتاج إلى خبرة سابقة."
+
+msgid "No previous programming experience required."
+msgstr "لا تحتاج إلى خبرة سابقة في البرمجة."
+
+msgid "No previous web development experience required. Bring a laptop with a modern browser."
+msgstr "لا تحتاج إلى خبرة سابقة في تطوير الويب. أحضر حاسوبًا محمولًا عليه متصفح حديث."
+
+msgid "No robotics experience required. Comfortable following a practical lab procedure."
+msgstr "لا تحتاج إلى خبرة سابقة في الروبوتات، لكن يلزم الاستعداد لاتباع خطوات التجارب العملية."
+
+msgid "Not provided"
+msgstr "لم تُضف بعد"
+
+msgid "Not scheduled"
+msgstr "لم يُحدّد الموعد"
+
+msgid "Not specified"
+msgstr "غير محدّد"
+
+msgid "Organise a small Python project into maintainable objects."
+msgstr "نظّم مشروع بايثون صغيرًا في كائنات سهلة الصيانة."
+
+msgid "Organise a small interface into clear component responsibilities."
+msgstr "قسّم الواجهة إلى مكوّنات ذات مسؤوليات واضحة."
+
+msgid "Organise information into a clear content hierarchy."
+msgstr "نظّم المعلومات في تسلسل واضح."
+
+msgid "Page %(number)s of %(total)s"
+msgstr "صفحة %(number)s من %(total)s"
+
+msgid "Page not found"
+msgstr "الصفحة غير موجودة"
+
+msgid "Pass data with props and manage simple state."
+msgstr "مرّر البيانات بالخصائص وأدر الحالة البسيطة."
+
+msgid "Phone number"
+msgstr "رقم الهاتف"
+
+msgid "Photo: olia danilevich / Pexels"
+msgstr "الصورة: olia danilevich / Pexels"
+
+msgid "Pick up where your curiosity left off."
+msgstr "كمّل رحلتك في التعلّم."
+
+msgid "Plan a small user research activity."
+msgstr "خطّط لنشاط بحث صغير مع المستخدمين."
+
+msgid "Practise object-oriented design in small, understandable Python projects."
+msgstr "طبّق البرمجة كائنية التوجه في مشروعات بايثون صغيرة وسهلة الفهم."
+
+msgid "Prepare a small dataset for supervised learning."
+msgstr "جهّز مجموعة بيانات صغيرة للتعلّم الخاضع للإشراف."
+
+msgid "Prerequisites"
+msgstr "المتطلبات"
+
+msgid "Present evidence-based findings clearly."
+msgstr "اعرض نتائج واضحة مبنية على الأدلة."
+
+msgid "Previous"
+msgstr "السابق"
+
+msgid "Previous page"
+msgstr "الصفحة السابقة"
+
+msgid "Profile"
+msgstr "حسابي"
+
+msgid "Profile complete"
+msgstr "اكتمال الملف"
+
+msgid "Python Bootcamp"
+msgstr "معسكر بايثون"
+
+msgid "Python OOP Workshop"
+msgstr "ورشة البرمجة كائنية التوجه ببايثون"
+
+msgid "Python Programming"
+msgstr "برمجة بايثون"
+
+msgid "Python Programming Basics"
+msgstr "أساسيات برمجة بايثون"
+
+msgid "Python programming and data analysis"
+msgstr "برمجة بايثون وتحليل البيانات"
+
+msgid "React Development"
+msgstr "تطوير React"
+
+msgid "React.js Fundamentals"
+msgstr "أساسيات React.js"
+
+msgid "Recognise common input validation risks."
+msgstr "تعرّف على المخاطر الشائعة للتحقق من المدخلات."
+
+msgid "Register"
+msgstr "إنشاء حساب"
+
+msgid "Registration is busy. Please try again in a moment."
+msgstr "التسجيل مشغول حاليًا. حاول مرة أخرى بعد قليل."
+
+msgid "Remaining seats"
+msgstr "المقاعد المتبقية"
+
+msgid "Robotics Lab"
+msgstr "معمل الروبوتات"
+
+msgid "SQL & Database Fundamentals"
+msgstr "أساسيات SQL وقواعد البيانات"
+
+msgid "Save changes"
+msgstr "حفظ التعديلات"
+
+msgid "Search activities"
+msgstr "ابحث عن كورس"
+
+msgid "Search by activity title"
+msgstr "اكتب اسم الكورس"
+
+msgid "Search by title or narrow the list by category."
+msgstr "ابحث باسم الكورس أو اختار التخصص المناسب."
+
+msgid "Shape a clear interface from an idea into a practical screen design."
+msgstr "حوّل فكرتك لتصميم شاشة واضح وقابل للتطبيق."
+
+msgid "Show"
+msgstr "إظهار"
+
+msgid "Show password"
+msgstr "إظهار كلمة المرور"
+
+msgid "Sign in to manage your profile and explore the activity catalogue."
+msgstr "سجّل دخولك لإدارة حسابك واستكشاف الكورسات المتاحة."
+
+msgid "Skip to content"
+msgstr "انتقل إلى المحتوى"
+
+msgid "Start date"
+msgstr "تاريخ البداية"
+
+msgid "Start exploring"
+msgstr "ابدأ رحلتك"
+
+msgid "Start writing clear Python programs with guided exercises."
+msgstr "ابدأ كتابة برامج واضحة ببايثون من خلال تدريبات عملية."
+
+msgid "Starts"
+msgstr "البداية"
+
+msgid "Structure content with semantic HTML elements."
+msgstr "نظّم المحتوى باستخدام عناصر HTML الدلالية."
+
+msgid "Student account required"
+msgstr "يلزم حساب طالب"
+
+msgid "Student portal"
+msgstr "بوابة الطلاب"
+
+msgid "Student profile"
+msgstr "الملف الطلابي"
+
+msgid "Student project"
+msgstr "مشروع طلابي"
+
+msgid "Students explore how intelligent systems are built, where machine learning fits, and why responsible use matters in real university and workplace contexts."
+msgstr "اكتشف كيف تُبنى الأنظمة الذكية ودور تعلّم الآلة فيها، وأهمية الاستخدام المسؤول في الدراسة والعمل."
+
+msgid "Students investigate the foundations of educational robotics by assembling a small system, reading sensor input, and programming a repeatable movement sequence in a supervised lab environment."
+msgstr "تعرّف على أساسيات الروبوتات التعليمية بتجميع نظام بسيط وقراءة بيانات الحساسات وبرمجة سلسلة حركات قابلة للتكرار، داخل معمل بإشراف المدرب."
+
+msgid "Students learn the basic structure of a React application, reusable components, props, and state through a focused interface project."
+msgstr "تعلّم الهيكل الأساسي لتطبيق React والمكوّنات القابلة لإعادة الاستخدام والخصائص والحالة، من خلال مشروع واجهة عملي."
+
+msgid "Students learn the principles behind secure passwords, input validation, access control, and common web vulnerabilities in a safe educational setting."
+msgstr "تعلّم مبادئ كلمات المرور الآمنة والتحقق من المدخلات والتحكم في الوصول وثغرات الويب الشائعة، في بيئة تعليمية آمنة."
+
+msgid "Students move from simple user needs to wireframes and a polished interface, learning how spacing, hierarchy, and content support usability."
+msgstr "انتقل من احتياجات المستخدم إلى مخططات أولية وواجهة متكاملة، واكتشف دور المسافات والتسلسل البصري والمحتوى في سهولة الاستخدام."
+
+msgid "Students practise semantic markup, layout fundamentals, typography, and responsive design while creating a polished university event page."
+msgstr "تدرّب على تنظيم المحتوى وتخطيط الصفحة والخطوط والتصميم المتجاوب من خلال إنشاء صفحة متكاملة لفعالية جامعية."
+
+msgid "Students work through a small analysis project covering data cleaning, exploration, basic visualisation, and communicating conclusions responsibly."
+msgstr "نفّذ مشروع تحليل صغيرًا يشمل تنظيف البيانات واستكشافها وعرضها بصريًا وتوصيل النتائج بشكل مسؤول."
+
+msgid "Summarise patterns with suitable visualisations."
+msgstr "لخّص الأنماط باستخدام رسوم بيانية مناسبة."
+
+msgid "Test and improve a repeatable movement sequence."
+msgstr "اختبر سلسلة حركات قابلة للتكرار وحسّن أداءها."
+
+msgid "That page has moved on."
+msgstr "الصفحة دي مش موجودة."
+
+msgid "This activity covers tables, relationships, filtering, joins, and practical query writing using a small university data example."
+msgstr "تعلّم الجداول والعلاقات والتصفية والربط وكتابة الاستعلامات عمليًا باستخدام مثال بسيط لبيانات جامعية."
+
+msgid "This activity has completed and is not accepting enrollments."
+msgstr "انتهى الكورس ولا يستقبل تسجيلات جديدة."
+
+msgid "This activity has ended and is no longer accepting students."
+msgstr "انتهى الكورس ولم يعد يستقبل تسجيلات جديدة."
+
+msgid "This activity is closed and is not accepting enrollments."
+msgstr "الكورس مغلق ولا يستقبل تسجيلات جديدة."
+
+msgid "This activity is full. There are no remaining seats."
+msgstr "اكتمل عدد الطلاب ولا توجد مقاعد متاحة."
+
+msgid "This activity is not currently accepting students."
+msgstr "التسجيل في الكورس غير متاح حاليًا."
+
+msgid "This hands-on bootcamp introduces Python syntax, problem-solving, and common data structures through a series of short exercises that build toward a small command-line project."
+msgstr "معسكر عملي يعرّفك بأساسيات بايثون وحل المشكلات وهياكل البيانات الشائعة، من خلال تدريبات قصيرة تنتهي ببناء مشروع صغير يعمل من سطر الأوامر."
+
+msgid "This introductory workshop covers the structure of web pages, basic styling, and the role of a browser. Students finish with a small, accessible multi-page site."
+msgstr "ورشة تمهيدية تغطي هيكل صفحات الويب والتنسيق الأساسي ودور المتصفح. في النهاية هتبني موقعًا صغيرًا متعدد الصفحات وسهل الاستخدام."
+
+msgid "This workshop introduces classes, objects, inheritance, and composition through a small project that students can extend after the session."
+msgstr "تعرّف على الفئات والكائنات والوراثة والتركيب من خلال مشروع صغير تقدر تطوّره بعد انتهاء الورشة."
+
+msgid "Trainer"
+msgstr "المدرب"
+
+msgid "Translate a user need into a simple interface structure."
+msgstr "حوّل احتياج المستخدم إلى هيكل واجهة بسيط."
+
+msgid "Try a different title or reset the category filter to see more opportunities."
+msgstr "جرّب اسمًا مختلفًا أو اختار كل التخصصات لعرض المزيد."
+
+msgid "Turn a raw dataset into clear findings and useful visual summaries."
+msgstr "حوّل البيانات الخام لنتائج واضحة ورسوم تساعدك تفهمها."
+
+msgid "Two men collaborating on code at a laptop."
+msgstr "شابان يعملان معًا على البرمجة باستخدام حاسوب محمول."
+
+msgid "U"
+msgstr "ج"
+
+msgid "UI/UX Design"
+msgstr "تصميم واجهات وتجربة المستخدم"
+
+msgid "UI/UX Design Fundamentals"
+msgstr "أساسيات تصميم واجهات وتجربة المستخدم"
+
+msgid "Understand common web risks and the habits that help prevent them."
+msgstr "افهم مخاطر الويب الشائعة والممارسات اللي تساعدك تتجنبها."
+
+msgid "Understand the main ideas, uses, and responsibilities of modern AI."
+msgstr "افهم الأفكار الأساسية للذكاء الاصطناعي واستخداماته ومسؤولياته."
+
+msgid "University"
+msgstr "الجامعة"
+
+msgid "University details"
+msgstr "البيانات الجامعية"
+
+msgid "University learning catalogue"
+msgstr "دليل كورسات الجامعة"
+
+msgid "University trainer"
+msgstr "مدرب جامعي"
+
+msgid "Upcoming"
+msgstr "قريبًا"
+
+msgid "Use CSS selectors, spacing, and typography effectively."
+msgstr "استخدم محددات CSS والمسافات والخطوط بشكل فعّال."
+
+msgid "Use composition and inheritance appropriately."
+msgstr "استخدم التركيب والوراثة في المواضع المناسبة."
+
+msgid "Use dark mode"
+msgstr "تفعيل الوضع الداكن"
+
+msgid "Use hierarchy, spacing, and content to improve usability."
+msgstr "حسّن الاستخدام بالترتيب البصري والمسافات والمحتوى."
+
+msgid "Use light mode"
+msgstr "تفعيل الوضع الفاتح"
+
+msgid "User research and interface design"
+msgstr "أبحاث المستخدمين وتصميم الواجهات"
+
+msgid "View activity details"
+msgstr "عرض تفاصيل الكورس"
+
+msgid "View all activities"
+msgstr "عرض كل الكورسات"
+
+msgid "View my profile"
+msgstr "عرض حسابي"
+
+msgid "We could not find the page you were looking for. The activity catalogue is still a good place to start."
+msgstr "لم نعثر على الصفحة المطلوبة. تقدر ترجع للرئيسية وتبدأ من جديد."
+
+msgid "Web Development"
+msgstr "تطوير الويب"
+
+msgid "Web Security Basics"
+msgstr "أساسيات أمن الويب"
+
+msgid "Web technologies and software engineering"
+msgstr "تقنيات الويب وهندسة البرمجيات"
+
+msgid "Welcome back"
+msgstr "أهلًا برجوعك"
+
+msgid "Welcome back, %(name)s."
+msgstr "أهلًا بعودتك، %(name)s."
+
+msgid "What You Will Learn"
+msgstr "هتتعلّم إيه؟"
+
+msgid "What you will explore"
+msgstr "عن الكورس"
+
+msgid "Work with lists, dictionaries, and simple input data."
+msgstr "تعامل مع القوائم والقواميس وبيانات الإدخال البسيطة."
+
+msgid "Write Python programs using variables and control flow."
+msgstr "اكتب برامج بايثون باستخدام المتغيرات والتحكم في مسار التنفيذ."
+
+msgid "Write SELECT queries with filtering and sorting."
+msgstr "اكتب استعلامات SELECT مع التصفية والترتيب."
+
+msgid "Write a simple program that responds to sensor readings."
+msgstr "اكتب برنامجًا بسيطًا يستجيب لقراءات الحساسات."
+
+msgid "Write readable Python using variables, conditions, and loops."
+msgstr "اكتب كود بايثون واضحًا باستخدام المتغيرات والشروط والحلقات."
+
+msgid "You are already enrolled in this activity."
+msgstr "أنت مسجّل في الكورس بالفعل."
+
+msgid "You are enrolled"
+msgstr "أنت مسجّل في الكورس"
+
+msgid "You can find this activity in your student profile."
+msgstr "هتلاقي الكورس في حسابك الطلابي."
+
+msgid "You have enrolled in this activity."
+msgstr "تم تسجيلك في الكورس بنجاح."
+
+msgid "You haven't enrolled in any activities yet."
+msgstr "لم تسجّل في أي كورس حتى الآن."
+
+msgid "Your account has been created. Please log in."
+msgstr "تم إنشاء حسابك. سجّل دخولك للمتابعة."
+
+msgid "Your interests. Your next chapter."
+msgstr "اهتماماتك هي بداية رحلتك."
+
+msgid "Your learning"
+msgstr "رحلتك التعليمية"
+
+msgid "Your learning context"
+msgstr "دراستك الجامعية"
+
+msgid "Your next chapter starts here."
+msgstr "بدايتك الجديدة من هنا."
+
+msgid "Your next step starts here"
+msgstr "خطوتك الجاية تبدأ هنا"
+
+msgid "Your profile was updated successfully."
+msgstr "تم تحديث بياناتك بنجاح."
+
+msgid "available opportunities"
+msgstr "الفرص المتاحة"
+
+msgid "days"
+msgstr "يوم"
+
+msgid "the details that matter"
+msgstr "التفاصيل المهمة ليك"
+
+msgid "with your community"
+msgstr "مع زملائك"
+
+msgid "← Back to activities"
+msgstr "العودة إلى الكورسات"
+
+msgid "← Back to home"
+msgstr "العودة للرئيسية"

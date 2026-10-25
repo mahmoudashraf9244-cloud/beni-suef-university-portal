@@ -1,0 +1,11 @@
+{% extends 'shop/base.html' %}
+{% load i18n %}
+{% block title %}{% translate 'Page not found' %}{% endblock %}
+{% block content %}
+<div class="container empty-page">
+            <p class="eyebrow">{% translate "404 / Page not found" %}</p>
+            <h1>{% translate "That page has moved on." %}</h1>
+            <p>{% translate "We could not find the page you were looking for. The activity catalogue is still a good place to start." %}</p>
+            <a class="btn btn-primary" href="{% url 'shop:home' %}">{% translate "Back to home" %} <span aria-hidden="true">→</span></a>
+        </div>
+    {% endblock %}

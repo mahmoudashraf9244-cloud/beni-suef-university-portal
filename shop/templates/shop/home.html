@@ -1,0 +1,26 @@
+{% extends 'shop/base.html' %}
+{% load static i18n %}
+{% block title %}{% translate 'Home' %}{% endblock %}
+{% block content %}
+<div class="container">
+    <section class="hero">
+        <div class="hero-content">
+            <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span>{% translate 'Your next step starts here' %}</p>
+            <h1>{% translate 'Learn something that stays with you.' %}</h1>
+            <p class="hero-copy">{% translate 'Explore practical courses and university activities. Find your interests, learn with experienced trainers, and turn curiosity into real skills.' %}</p>
+            <div class="hero-actions"><a class="btn btn-primary" href="{% url 'shop:activity_list' %}">{% translate 'Explore Activities' %} <span class="direction-arrow" aria-hidden="true">→</span></a></div>
+            <div class="hero-note"><span aria-hidden="true">✓</span>{% translate 'Discover. Practise. Move forward.' %}</div>
+        </div>
+        <figure class="hero-visual">
+            <img src="{% static 'shop/images/collaborative-learning.jpg' %}" alt="{% translate 'Two men collaborating on code at a laptop.' %}" width="1125" height="750" fetchpriority="high">
+            <figcaption><span class="photo-symbol" aria-hidden="true">↗</span><span><strong>{% translate 'Learning happens together.' %}</strong><small>{% translate 'Build skills beyond the classroom.' %}</small></span></figcaption>
+        </figure>
+    </section>
+    <div class="learning-strip"><span><b>01</b> {% translate 'Find your interest' %}</span><span><b>02</b> {% translate 'Choose your activity' %}</span><span><b>03</b> {% translate 'Make your next move' %}</span></div>
+    {% if user.is_authenticated %}<section class="welcome-box"><div><p class="eyebrow">{% translate 'Good to see you' %}</p><h2>{% blocktranslate with name=user.get_full_name|default:user.username %}Welcome back, {{ name }}.{% endblocktranslate %}</h2><p>{% translate 'Keep your student details current so your profile is ready when you need it.' %}</p></div><a class="btn btn-secondary" href="{% url 'shop:student_profile' %}">{% translate 'View my profile' %}</a></section>{% endif %}
+    <section class="featured-section">
+        <div class="section-heading"><div><p class="eyebrow">{% translate 'Start exploring' %}</p><h2>{% translate 'Available activities' %}</h2></div></div>
+        <div class="activity-grid">{% for activity in activities %}{% include 'shop/partials/activity_card.html' %}{% empty %}<div class="empty-state"><strong>{% translate 'No activities are available yet.' %}</strong><span>{% translate 'Check back soon for new learning opportunities.' %}</span></div>{% endfor %}</div>
+    </section>
+</div>
+{% endblock %}

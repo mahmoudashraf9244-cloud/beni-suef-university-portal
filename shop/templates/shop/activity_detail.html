@@ -1,0 +1,78 @@
+{% extends 'shop/base.html' %}
+{% load i18n portal %}
+
+{% block title %}{{ activity.title|localize }}{% endblock %}
+
+{% block content %}
+    <div class="container page-shell">
+        <a href="{% url 'shop:activity_list' %}" class="back-link">{% translate "← Back to activities" %}</a>
+        <article class="detail-card">
+            <div class="detail-topline"><span class="category-badge">{{ activity.category.name|localize }}</span><span class="availability {{ activity.status_class }}">{{ activity.status_label|localize }}</span></div>
+            <div class="detail-intro">
+                <p class="eyebrow">{% translate "Activity details" %}</p>
+                <h1>{{ activity.title|localize }}</h1>
+                <p class="detail-lede">{{ activity.short_description|default:_('A practical university activity designed for curious students.')|localize }}</p>
+                {% if is_enrolled %}
+                    <div class="join-panel join-panel-enrolled"><span class="join-icon" aria-hidden="true">✓</span><div><strong>{% translate "You are enrolled" %}</strong><span>{% translate "You can find this activity in your student profile." %}</span></div></div>
+                {% elif not activity.is_joinable %}
+                    {% if activity.status_label == 'Completed' %}
+                        <div class="join-panel join-panel-completed"><span class="join-icon" aria-hidden="true">—</span><div><strong>{% translate "Activity completed" %}</strong><span>{% translate "This activity has ended and is no longer accepting students." %}</span></div></div>
+                    {% else %}
+                        <div class="join-panel join-panel-closed"><span class="join-icon" aria-hidden="true">—</span><div><strong>{% translate "Activity closed" %}</strong><span>{% translate "This activity is not currently accepting students." %}</span></div></div>
+                    {% endif %}
+                {% elif remaining_seats == 0 %}
+                    <div class="join-panel join-panel-closed"><span class="join-icon" aria-hidden="true">—</span><div><strong>{% translate "Activity full" %}</strong><span>{% translate "All places in this activity have been taken." %}</span></div></div>
+                {% elif user.is_authenticated and student_profile %}
+                    <form class="enrollment-form" method="post" action="{% url 'shop:enroll_activity' activity.activity_id %}">
+                        {% csrf_token %}
+                        <button class="btn btn-primary join-button" type="submit">{% translate "Join Activity" %} <span class="direction-arrow" aria-hidden="true">→</span></button>
+                    </form>
+                {% elif user.is_authenticated %}
+                    <div class="join-panel join-panel-closed"><span class="join-icon" aria-hidden="true">—</span><div><strong>{% translate "Student account required" %}</strong><span>{% translate "Enrollment is available to student accounts." %}</span></div></div>
+                {% else %}
+                    <a class="btn btn-primary join-button" href="{% url 'shop:login' %}?next={{ request.path|urlencode }}">{% translate "Log in to see full details" %}</a>
+                {% endif %}
+            </div>
+
+            <div class="detail-layout">
+                <div>
+                    <div class="description-block">
+                        <p class="eyebrow">{% translate "Course Overview" %}</p>
+                        <h2>{% translate "What you will explore" %}</h2>
+                        <p>{{ activity.full_description|default:activity.short_description|default:_('No description available.')|localize }}</p>
+                    </div>
+                    <section class="course-section">
+                        <p class="eyebrow">{% translate "Learning Outcomes" %}</p>
+                        <h2>{% translate "What You Will Learn" %}</h2>
+                        <ul class="outcome-list">
+                            {% for outcome in activity.learning_outcomes.splitlines %}
+                                {% if outcome %}<li>{{ outcome|localize }}</li>{% endif %}
+                            {% empty %}
+                                <li>{% translate "Build practical knowledge through guided exercises." %}</li>
+                            {% endfor %}
+                        </ul>
+                    </section>
+                    <section class="course-section prerequisites-section">
+                        <p class="eyebrow">{% translate "Prerequisites" %}</p>
+                        <h2>{% translate "Before You Begin" %}</h2>
+                        <p>{{ activity.prerequisites|default:_('No previous experience required.')|localize }}</p>
+                    </section>
+                    <div class="trainer-panel"><div class="trainer-avatar" aria-hidden="true">{{ activity.trainer.full_name|first }}</div><div><p class="eyebrow">{% translate "Led by" %}</p><h3>{{ activity.trainer.full_name|localize }}</h3><p>{{ activity.trainer.profile.specialization|default:_('University trainer')|localize }}</p></div></div>
+                </div>
+                <aside class="detail-aside">
+                    <p class="eyebrow">{% translate "At a glance" %}</p>
+                    <div class="detail-meta">
+                        <p><strong>{% translate "Start date" %}</strong><span>{{ activity.start_date|default:_('Not scheduled') }}</span></p>
+                        <p><strong>{% translate "End date" %}</strong><span>{{ activity.end_date|default:_('Not specified') }}</span></p>
+                        <p><strong>{% translate "Duration" %}</strong><span>{{ activity.duration }} {% translate "days" %}</span></p>
+                        <p><strong>{% translate "Maximum students" %}</strong><span>{{ activity.max_students }}</span></p>
+                        <p><strong>{% translate "Enrolled students" %}</strong><span>{{ enrollment_count }}</span></p>
+                        <p><strong>{% translate "Remaining seats" %}</strong><span>{{ remaining_seats }}</span></p>
+                        <p><strong>{% translate "Course level" %}</strong><span>{{ activity.get_level_display|localize }}</span></p>
+                        <p><strong>{% translate "Category" %}</strong><span>{{ activity.category.name|localize }}</span></p>
+                    </div>
+                </aside>
+            </div>
+        </article>
+    </div>
+{% endblock %}

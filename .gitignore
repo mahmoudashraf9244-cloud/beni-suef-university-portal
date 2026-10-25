@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment and local settings
+.env
+.env.*
+!.env.example
+
+# Django local files
+db.sqlite3
+*.sqlite3
+.backups/
+staticfiles/
+media/
+
+# Local source packages and assignment materials
+*.zip
+*.mp4
+متطلبات المشروع/
+
+# Local logs
+*.log
+
+# Coverage and test output
+.coverage
+.coverage.*
+.pytest_cache/
+htmlcov/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.code-workspace
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini

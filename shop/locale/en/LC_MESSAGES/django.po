@@ -1,0 +1,17 @@
+msgid ""
+msgstr "Language: en\nContent-Type: text/plain; charset=UTF-8\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "د. أحمد حسن"
+msgstr "Dr. Ahmed Hassan"
+
+msgid "محمد خالد"
+msgstr "Mohamed Khaled"
+
+msgid "د. عمر محمود"
+msgstr "Dr. Omar Mahmoud"
+
+msgid "يوسف إبراهيم"
+msgstr "Youssef Ibrahim"
+
+msgid "عبد الرحمن علي"
+msgstr "Abdelrahman Ali"

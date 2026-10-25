@@ -1,0 +1,12 @@
+{% load static i18n portal %}
+{% course_image activity as cover %}
+<article class="activity-card">
+    <a class="activity-card-link" href="{% url 'shop:activity_detail' activity.activity_id %}">
+        <div class="course-art"><img src="{% static cover %}" alt="" width="76" height="76" loading="lazy"></div>
+        <div class="card-header"><span class="category-badge">{{ activity.category.name|localize }}</span><span class="availability {{ activity.status_class }}">{{ activity.status_label|localize }}</span></div>
+        <h3>{{ activity.title|localize }}</h3>
+        <p class="card-description">{{ activity.short_description|default:_('A practical opportunity to learn, practise, and connect.')|localize }}</p>
+        <div class="card-meta"><p><strong>{% translate 'Trainer' %}</strong><span>{{ activity.trainer.full_name|localize }}</span></p><p><strong>{% translate 'Duration' %}</strong><span>{% blocktranslate with days=activity.duration %}{{ days }} days{% endblocktranslate %}</span></p></div>
+        <span class="card-link">{% translate 'View activity details' %} <span class="direction-arrow" aria-hidden="true">→</span></span>
+    </a>
+</article>

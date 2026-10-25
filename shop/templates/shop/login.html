@@ -1,0 +1,23 @@
+{% extends 'shop/base.html' %}
+{% load static i18n %}
+
+{% block title %}{% translate "Login" %}{% endblock %}
+
+{% block content %}
+    <div class="container auth-layout">
+        <aside class="auth-intro"><p class="eyebrow">{% translate "Student portal" %}</p><h1>{% translate "Pick up where your curiosity left off." %}</h1><p>{% translate "Sign in to manage your profile and explore the activity catalogue." %}</p><span class="auth-mark" aria-hidden="true">{% translate "U" %}<span>+</span></span></aside>
+        <section class="form-card auth-card"><p class="eyebrow">{% translate "Welcome back" %}</p><h2>{% translate "Log in to your account" %}</h2>
+            <form method="post" novalidate>
+                {% csrf_token %}
+                {% if request.GET.next %}<input type="hidden" name="next" value="{{ request.GET.next }}">{% endif %}
+                {% if form.non_field_errors %}<div class="errorlist">{{ form.non_field_errors }}</div>{% endif %}
+                {% for field in form %}{% include 'shop/partials/form_field.html' %}{% endfor %}
+                <button type="submit" class="btn btn-primary btn-wide">{% translate "Log in" %} <span class="direction-arrow" aria-hidden="true">→</span></button>
+            </form>
+            <p class="form-link">{% translate "New to the portal?" %} <a href="{% url 'shop:register' %}{% if request.GET.next %}?next={{ request.GET.next|urlencode }}{% endif %}">{% translate "Create an account" %}</a></p>
+            <p class="form-link"><a href="{% url 'shop:home' %}">{% translate "← Back to home" %}</a></p>
+        </section>
+    </div>
+{% endblock %}
+
+{% block extra_js %}<script src="{% static 'shop/js/auth.js' %}"></script>{% endblock %}

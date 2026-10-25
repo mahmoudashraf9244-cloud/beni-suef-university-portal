@@ -1,0 +1,22 @@
+{% extends 'shop/base.html' %}
+{% load static i18n %}
+
+{% block title %}{% translate "Register" %}{% endblock %}
+
+{% block content %}
+    <div class="container auth-layout register-layout">
+        <aside class="auth-intro"><p class="eyebrow">{% translate "Join the community" %}</p><h1>{% translate "Your next chapter starts here." %}</h1><p>{% translate "Create a student account to explore activities and keep your university details organised." %}</p><div class="auth-list"><span>01 <strong>{% translate "Explore" %}</strong> {% translate "available opportunities" %}</span><span>02 <strong>{% translate "Compare" %}</strong> {% translate "the details that matter" %}</span><span>03 <strong>{% translate "Grow" %}</strong> {% translate "with your community" %}</span></div></aside>
+        <section class="form-card auth-card"><p class="eyebrow">{% translate "Get started" %}</p><h2>{% translate "Create your account" %}</h2>
+            <form method="post" novalidate>
+                {% csrf_token %}
+                {% if next_url %}<input type="hidden" name="next" value="{{ next_url }}">{% endif %}
+                {% if form.non_field_errors %}{{ form.non_field_errors }}{% endif %}
+                <div class="form-grid">{% for field in form %}{% include 'shop/partials/form_field.html' %}{% endfor %}</div>
+                <button type="submit" class="btn btn-primary btn-wide">{% translate "Create account" %} <span class="direction-arrow" aria-hidden="true">→</span></button>
+            </form>
+            <p class="form-link">{% translate "Already have an account?" %} <a href="{% url 'shop:login' %}{% if next_url %}?next={{ next_url|urlencode }}{% endif %}">{% translate "Log in here" %}</a>.</p>
+        </section>
+    </div>
+{% endblock %}
+
+{% block extra_js %}<script src="{% static 'shop/js/auth.js' %}"></script>{% endblock %}

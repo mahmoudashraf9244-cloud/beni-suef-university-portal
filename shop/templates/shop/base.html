@@ -1,0 +1,60 @@
+{% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}" dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% translate 'Discover courses and activities at Beni-Suef University.' %}">
+    <title>{% block title %}{% translate 'Courses and activities' %}{% endblock %} | {% translate 'Beni-Suef University' %}</title>
+    <script src="{% static 'shop/js/theme.js' %}"></script>
+    <link rel="icon" href="{% static 'shop/images/learning-mark.svg' %}" type="image/svg+xml">
+    <link rel="stylesheet" href="{% static 'shop/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'shop/css/identity.css' %}">
+    <script src="{% static 'shop/js/portal.js' %}" defer></script>
+    <script src="{% static 'shop/js/course-cards.js' %}" defer></script>
+</head>
+<body data-authenticated="{{ user.is_authenticated|yesno:'true,false' }}" data-close-details="{% translate 'Close details' %}" data-loading-details="{% translate 'Loading course details…' %}" data-details-open="{% translate 'Course details are open' %}">
+    <a class="skip-link" href="#main-content">{% translate 'Skip to content' %}</a>
+    <header class="site-header">
+        <nav class="navbar container" aria-label="{% translate 'Main navigation' %}">
+            <a class="brand" href="{% url 'shop:home' %}">
+                <img class="brand-mark" src="{% static 'shop/images/learning-mark.svg' %}" width="44" height="44" alt="">
+                <span class="brand-text"><strong>{% translate 'Beni-Suef University' %}</strong><small>{% translate 'Courses and activities' %}</small></span>
+            </a>
+            <div class="nav-links">
+                <a href="{% url 'shop:home' %}">{% translate 'Home' %}</a>
+                <a href="{% url 'shop:activity_list' %}" {% if request.resolver_match.url_name == 'activity_list' %}class="is-active" aria-current="page"{% endif %}>{% translate 'Activities' %}</a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'shop:student_profile' %}" {% if request.resolver_match.url_name == 'student_profile' %}class="is-active" aria-current="page"{% endif %}>{% translate 'Profile' %}</a>
+                    <form method="post" action="{% url 'shop:logout' %}" class="logout-form">{% csrf_token %}<button type="submit" class="link-button">{% translate 'Log out' %}</button></form>
+                {% else %}
+                    <a href="{% url 'shop:login' %}" class="nav-login {% if request.resolver_match.url_name == 'login' %}is-active{% endif %}">{% translate 'Log in' %}</a>
+                    <a href="{% url 'shop:register' %}" class="nav-register">{% translate 'Create account' %}</a>
+                {% endif %}
+            </div>
+            <div class="display-controls">
+                <form action="{% url 'set_language' %}" method="post" class="language-form">
+                    {% csrf_token %}<input type="hidden" name="next" value="{{ request.get_full_path }}">
+                    {% if LANGUAGE_CODE == 'ar' %}<button type="submit" name="language" value="en" lang="en" aria-label="Switch to English">EN</button>
+                    {% else %}<button type="submit" name="language" value="ar" lang="ar" aria-label="التبديل إلى العربية">عربي</button>{% endif %}
+                </form>
+                <button type="button" class="theme-toggle" hidden data-theme-toggle data-dark-label="{% translate 'Use dark mode' %}" data-light-label="{% translate 'Use light mode' %}" aria-label="{% translate 'Use dark mode' %}" aria-pressed="false"><span class="theme-moon" aria-hidden="true">☾</span><span class="theme-sun" aria-hidden="true">☀</span></button>
+            </div>
+        </nav>
+    </header>
+    <main id="main-content" class="main-content" tabindex="-1">
+        {% if messages %}<div class="container messages" aria-live="polite">{% for message in messages %}<div class="message {{ message.tags }}">{{ message }}</div>{% endfor %}</div>{% endif %}
+        {% block content %}{% endblock %}
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-branding"><a class="brand footer-brand" href="{% url 'shop:home' %}"><img class="brand-mark" src="{% static 'shop/images/learning-mark.svg' %}" width="44" height="44" alt=""><span class="brand-text"><strong>{% translate 'Beni-Suef University' %}</strong><small>{% translate 'Courses and activities' %}</small></span></a><p>{% translate 'A place to learn. A skill to take forward.' %}</p></div>
+            <nav class="footer-links" aria-label="{% translate 'Footer navigation' %}"><a href="{% url 'shop:home' %}">{% translate 'Home' %}</a><a href="{% url 'shop:activity_list' %}">{% translate 'Activities' %}</a><a href="{% url 'shop:student_profile' %}">{% translate 'Profile' %}</a></nav>
+            <div class="footer-meta"><p>© {% now 'Y' %} {% translate 'Beni-Suef University' %}</p><p>{% translate 'Student project' %}</p></div>
+        </div>
+    </footer>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

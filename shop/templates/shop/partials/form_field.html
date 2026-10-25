@@ -1,0 +1,12 @@
+{% load i18n %}
+<div class="form-group {% if field.name == 'password1' or field.name == 'password2' %}form-span{% endif %}">
+    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+    {% if field.field.widget.input_type == 'password' %}
+    <div class="password-input">
+        {{ field }}
+        <button hidden type="button" class="password-toggle" data-password-toggle="{{ field.id_for_label }}" data-show="{% translate 'Show' %}" data-hide="{% translate 'Hide' %}" data-show-label="{% translate 'Show password' %}" data-hide-label="{% translate 'Hide password' %}" aria-controls="{{ field.id_for_label }}" aria-label="{% translate 'Show password' %}" aria-pressed="false">{% translate 'Show' %}</button>
+    </div>
+    {% else %}{{ field }}{% endif %}
+    {% if field.help_text %}<div id="{{ field.auto_id }}_helptext" class="help-text">{{ field.help_text|safe }}</div>{% endif %}
+    {{ field.errors }}
+</div>

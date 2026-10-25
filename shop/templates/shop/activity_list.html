@@ -1,0 +1,33 @@
+{% extends 'shop/base.html' %}
+{% load static i18n portal %}
+{% block title %}{% translate 'Activities' %}{% endblock %}
+{% block content %}
+<div class="container page-shell">
+    <section class="page-heading">
+        <div><p class="eyebrow">{% translate 'University learning catalogue' %}</p><h1>{% translate 'Find your next activity.' %}</h1><p class="page-lede">{% translate 'Explore courses and activities that help you learn, practise, and grow.' %}</p></div>
+        <div class="page-index">02 <span>/</span> {% translate 'Catalogue' %}</div>
+    </section>
+    <form method="get" class="filter-form" id="catalogue-filters" action="{% url 'shop:activity_list' %}">
+        <div class="filter-intro"><span class="filter-icon" aria-hidden="true">⌕</span><div><strong>{% translate 'Explore the catalogue' %}</strong><span>{% translate 'Search by title or narrow the list by category.' %}</span></div></div>
+        <div class="filter-row">
+            <div><label class="sr-only" for="activity-search">{% translate 'Search activities' %}</label><input id="activity-search" type="search" name="q" value="{{ query }}" placeholder="{% translate 'Search by activity title' %}"></div>
+            <div><label class="sr-only" for="activity-category">{% translate 'Filter by category' %}</label><select id="activity-category" name="category"><option value="">{% translate 'All categories' %}</option>{% for category in categories %}<option value="{{ category.category_id }}" {% if selected_category == category.category_id|stringformat:'s' %}selected{% endif %}>{{ category.name|localize }}</option>{% endfor %}</select></div>
+            <button type="submit" class="btn btn-primary">{% translate 'Apply filters' %} <span class="direction-arrow" aria-hidden="true">→</span></button>
+        </div>
+    </form>
+    <p id="catalogue-announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true" data-loading="{% translate 'Loading activities…' %}"></p>
+    <section id="catalogue-results" class="catalogue-results" tabindex="-1" aria-labelledby="results-count" aria-busy="false">
+        <div class="results-heading"><h2 id="results-count" class="results-count">{% blocktranslate with count=page_obj.paginator.count %}Activities found: {{ count }}{% endblocktranslate %}</h2>{% if query or selected_category %}<a class="text-link" data-catalogue-link href="{% url 'shop:activity_list' %}">{% translate 'Clear filters' %}</a>{% endif %}</div>
+        <div class="activity-grid">{% for activity in activities %}{% include 'shop/partials/activity_card.html' %}{% empty %}<div class="empty-state"><strong>{% translate 'No activities match your search.' %}</strong><span>{% translate 'Try a different title or reset the category filter to see more opportunities.' %}</span><a class="btn btn-secondary" data-catalogue-link href="{% url 'shop:activity_list' %}">{% translate 'View all activities' %}</a></div>{% endfor %}</div>
+        {% if page_obj.has_other_pages %}
+        <nav class="pagination" aria-label="{% translate 'Activity pages' %}">
+            {% if page_obj.has_previous %}<a data-catalogue-link href="?q={{ query|urlencode }}&category={{ selected_category|urlencode }}&page={{ page_obj.previous_page_number }}" aria-label="{% translate 'Previous page' %}"><span class="direction-arrow" aria-hidden="true">←</span> {% translate 'Previous' %}</a>{% endif %}
+            <span class="page-position">{% blocktranslate with number=page_obj.number total=page_obj.paginator.num_pages %}Page {{ number }} of {{ total }}{% endblocktranslate %}</span>
+            {% if page_obj.has_next %}<a {% if user.is_authenticated %}data-catalogue-link{% endif %} href="?q={{ query|urlencode }}&category={{ selected_category|urlencode }}&page={{ page_obj.next_page_number }}" aria-label="{% translate 'Next page' %}">{% translate 'Next' %} <span class="direction-arrow" aria-hidden="true">→</span></a>{% endif %}
+        </nav>
+        {% if not user.is_authenticated %}<p class="catalogue-signin-note">{% translate 'Log in to see more courses' %}</p>{% endif %}
+        {% endif %}
+    </section>
+</div>
+{% endblock %}
+{% block extra_js %}<script src="{% static 'shop/js/catalogue.js' %}" defer></script>{% endblock %}
