@@ -183,6 +183,17 @@ The tests cover the main pages, activity search and category filtering, paginati
 
 GitHub Actions runs the Django system check and complete test suite on every push and pull request.
 
+## Live demo deployment
+
+The project is ready for Vercel's native Django runtime. Configure a private
+`SECRET_KEY` and a managed PostgreSQL `DATABASE_URL` in the Vercel project before
+deploying. The application continues to use SQLite for local development when no
+`DATABASE_URL` is present.
+
+After connecting the database, apply migrations and load the fictional catalogue with
+`python manage.py migrate` and `python manage.py seed_sample_data`. Never use the demo
+student password for real accounts.
+
 ## GitHub safety
 
 The repository intentionally excludes the local SQLite database, virtual environments, environment files, backups, logs, generated static output, source archives, recordings, IDE settings, and the original assignment-material folder. Never commit a production `SECRET_KEY`, real student records, passwords, or a local `.env` file.

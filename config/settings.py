@@ -3,6 +3,7 @@
 import os
 from pathlib import Path
 
+import dj_database_url
 from django.core.exceptions import ImproperlyConfigured
 
 # Paths
@@ -27,6 +28,8 @@ ALLOWED_HOSTS = [
     ).split(',')
     if host.strip()
 ]
+if os.environ.get('VERCEL'):
+    ALLOWED_HOSTS.append('.vercel.app')
 
 SECURE_SSL_REDIRECT = not DEBUG
 SESSION_COOKIE_SECURE = not DEBUG
@@ -86,6 +89,11 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+if os.environ.get('DATABASE_URL'):
+    DATABASES['default'] = dj_database_url.config(
+        conn_max_age=0,
+        conn_health_checks=True,
+    )
 
 
 # Passwords
