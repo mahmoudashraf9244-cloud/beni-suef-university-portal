@@ -282,6 +282,9 @@ msgstr "تعديل البيانات"
 msgid "Email"
 msgstr "البريد الإلكتروني"
 
+msgid "An account with this email address already exists."
+msgstr "يوجد حساب مسجل بهذا البريد الإلكتروني بالفعل."
+
 msgid "End date"
 msgstr "تاريخ النهاية"
 

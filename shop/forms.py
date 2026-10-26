@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from django.utils.translation import gettext_lazy as _
+from django.utils.translation import get_language, gettext_lazy as _
 
 from .models import StudentProfile
 
@@ -24,6 +24,17 @@ class UserRegisterForm(UserCreationForm):
     class Meta:
         model = User
         fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2')
+
+    def clean_email(self):
+        email = self.cleaned_data['email'].strip().lower()
+        if User.objects.filter(email__iexact=email).exists():
+            message = (
+                'يوجد حساب مسجل بهذا البريد الإلكتروني بالفعل.'
+                if get_language().startswith('ar')
+                else 'An account with this email address already exists.'
+            )
+            raise forms.ValidationError(message)
+        return email
 
 
 class StudentProfileForm(forms.ModelForm):

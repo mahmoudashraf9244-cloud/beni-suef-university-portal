@@ -185,6 +185,22 @@ class PortalTests(TestCase):
 		new_user = User.objects.get(username='newstudent')
 		self.assertTrue(StudentProfile.objects.filter(user=new_user).exists())
 
+	def test_register_rejects_duplicate_email_case_insensitively(self):
+		response = self.client.post(
+			reverse('shop:register'),
+			{
+				'username': 'anotherstudent',
+				'first_name': 'Another',
+				'last_name': 'Student',
+				'email': self.user.email.upper(),
+				'password1': 'StrongPass123!',
+				'password2': 'StrongPass123!',
+			},
+		)
+		self.assertEqual(response.status_code, 200)
+		self.assertContains(response, 'An account with this email address already exists.')
+		self.assertFalse(User.objects.filter(username='anotherstudent').exists())
+
 	def test_login_redirects_to_home(self):
 		response = self.client.post(
 			reverse('shop:login'),
