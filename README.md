@@ -2,6 +2,8 @@
 
 A bilingual Django student portal for discovering university courses and activities. Students can browse and search the catalogue, inspect course details, create an account, enroll safely, and manage a private profile.
 
+**Live demo:** [beni-suef-university-portal.vercel.app](https://beni-suef-university-portal.vercel.app/)
+
 ## Features
 
 - Responsive Beni-Suef University project identity with light and dark themes
@@ -12,6 +14,7 @@ A bilingual Django student portal for discovering university courses and activit
 - Animated course-detail modal with a full-page fallback when JavaScript is unavailable
 - Activity detail pages with overview, learning outcomes, prerequisites, level, trainer, start/end dates, and capacity
 - Student registration and login/logout
+- Case-insensitive unique-email validation during student registration
 - Student activity enrollment with capacity checks, duplicate protection, and a private My activities list
 - Authenticated student profile and profile editing
 - Custom 404 page and friendly empty states
@@ -21,7 +24,7 @@ A bilingual Django student portal for discovering university courses and activit
 
 - Python 3.12, 3.13, or 3.14 (verified with Python 3.14)
 - Django 6.1.2
-- SQLite
+- PostgreSQL (Neon) in production and SQLite for local development
 - HTML and CSS
 - Django templates and the built-in authentication system
 
@@ -184,6 +187,9 @@ The tests cover the main pages, activity search and category filtering, paginati
 GitHub Actions runs the Django system check and complete test suite on every push and pull request.
 
 ## Live demo deployment
+
+The public demo is available at
+[beni-suef-university-portal.vercel.app](https://beni-suef-university-portal.vercel.app/).
 
 The project is ready for Vercel's native Django runtime. Configure a private
 `SECRET_KEY` and a managed PostgreSQL `DATABASE_URL` in the Vercel project before
